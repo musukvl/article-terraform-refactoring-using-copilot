@@ -33,9 +33,14 @@ GitHub Copilot Agents automated the refactorings now we use the following algori
    
 1. **Generate moved.tf file with moved blocks to avoid any changes in the next plan.** On this step, the agent can do multiple iterations for moving blocks generation and runing  the Terraform plan. I would recomend to review moved.tf file because in complex cases LLM could do a wrong correlation between resources and generate move valid from Terraform point of view, but not from the purpose. For example:
     ```hcl
+     moved {
+      from = aws_iam_user[1].team_two_user
+      to   = module["team1"].aws_iam_user.user
+    }
     moved {
       from = aws_iam_user[2].team_one_user
       to   = module["team2"].aws_iam_user.user
     }
+    
     ```
   
