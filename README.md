@@ -11,25 +11,18 @@ id: 3051956
 
 Terraform and OpenTofu are the only major IaC tools today that provide a fully deterministic, declarative, provider-agnostic, predictable execution plan across AWS + Azure + other cloud platforms.
 
-However, the Terraform development experience is still close to what we had for JavaScript in 2008: we have syntax highlighting, basic static analysis, and basic code navigation. 
-But the Terraform code refactoring still should be done manually. 
-We still have no button "extract resources to the module" in JetBrains IDE or VS Code. 
-Mainly because in the Terraform world, code refactoring should go together with state transformation.
+However, the Terraform development experience is still close to what we had for JavaScript in 2008: we have syntax highlighting, basic static analysis, and basic code navigation. But the Terraform code refactoring still should be done manually. We still have no button "extract resources to the module" in JetBrains IDE or VS Code. Mainly because in the Terraform world, code refactoring should go together with state transformation.
 
-By the end of 2024 in my team had written a lot of Terraform code. 
-We have learned how to master infrastructure as code using Terraform, our expertise has grown up and the code written two years ago become ugly to us. 
-But state transformations and the complexity of code change stopped us from starting to do refactoring on a large scale. For example, we have states with 6K resources.
+By the end of 2024 in my team had written a lot of Terraform code. We have learned how to master infrastructure as code using Terraform, our expertise has grown up and the code written two years ago become ugly to us. But state transformations and the complexity of code change stopped us from starting to do refactoring on a large scale. For example, we have states with 6K resources.
 
 We tried to use multiple ways to do state transformations:
 
-Created Python scripts to generate Terraform moved blocks for the particular refactoring.
+* Created Python scripts to generate Terraform moved blocks for the particular refactoring.
 
-Tried to use Terraform file templates and construct object maps to pass old and new resource structure.
+* Tried to use Terraform file templates and construct object maps to pass old and new resource structure.
 
 All these approaches worked, but required a lot of effort, especially for huge states and code base.
-
 Everything changed when GitHub Copilot introduced Edits mode. We started actively using it for Terraform code refactoring, and even then, I realized that Copilot can solve our code quality issues faster.
-
 GitHub Copilot Agents automated the refactoring now we use the following algorithms:
 
 1. **Ask Copilot for the Terraform code changes.** Here is very important to limit the change scope and do refactoring fraction by fraction. Better to have multiple iterations for refactoring to not lose control on changes.
