@@ -5,7 +5,7 @@ description: How AI assistants make Terraform greater than before
 tags: terraform
 canonical_url: null
 date: '2025-11-23T18:36:19Z'
-cover_image: ./logo.jpg
+cover_image: ./logo1.jpg
 id: 3051956
 ---
 
