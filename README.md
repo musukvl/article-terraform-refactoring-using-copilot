@@ -1,5 +1,5 @@
 ---
-title: Using Github Copilot for Terraform code refactoring
+title: Using GitHub Copilot for Terraform code refactoring
 published: true
 description: How AI assistants make Terraform greater than before
 tags: terraform
