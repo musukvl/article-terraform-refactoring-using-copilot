@@ -8,7 +8,6 @@ date: '2025-11-23T18:36:19Z'
 cover_image: ./logo.jpg
 id: 3051956
 ---
- 
 
 Terraform and OpenTofu are the only major IaC tools today that provide a fully deterministic, declarative, provider-agnostic, predictable execution plan across AWS + Azure + other cloud platforms.
 
