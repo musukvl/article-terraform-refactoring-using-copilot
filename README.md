@@ -50,4 +50,6 @@ GitHub Copilot Agents automated the refactoring now we use the following algorit
 
 ## Final Thoughts
 
-In 2025, Terraform remains the strongest cloud‑agnostic Infrastructure‑as‑Code tool. Pulumi is easier to develop with, but it is not as deterministic as Terraform’s declarative model. Modern AI assistants like GitHub Copilot and Cursor dramatically accelerate safe refactoring and reduce the fear of touching legacy state. With the help of AI‑driven tooling, Terraform has become a more powerful IaC solution than at any previous point in its history.
+In 2025, Terraform remains the strongest cloud‑agnostic Infrastructure‑as‑Code tool. Pulumi is easier to develop with, but it is not as deterministic as Terraform’s declarative model. 
+Modern AI assistants like GitHub Copilot and Cursor dramatically accelerate safe refactoring and reduce the fear of touching legacy state.
+With the help of AI‑driven tooling, Terraform has become a more powerful IaC solution than at any previous point in its history.
